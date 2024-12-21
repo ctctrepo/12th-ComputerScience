@@ -1,0 +1,92 @@
+# value Error -  convert a string to an integer(float)
+
+a = 34
+b = "test"
+
+#works normally 
+print(float(a))
+
+#valueerror
+print(float(b))
+
+-----------------------------------------------------------------------------------------
+#  open() function when trying to open a file that does not exist.
+# IO Error
+
+f = open ( "foo.txt", 'r' )
+
+
+------------------------------------------------------------------------------------------
+#  KeyboardInterrupt is a built-in exception that occurs when the user interrupts the execution of a 
+#  program using a keyboard action, typically by pressing Ctrl+C.
+try:
+    while True:
+        name = input("Enter your name: ")
+        print(f"Your name is : {name}")
+except KeyboardInterrupt:
+    print("\nProgram terminated by user.")
+
+
+------------------------------------------------------------------------------------------------------
+# ImportError
+# This error occurs when the Python interpreter is unable to import a particular name or module within your code.
+parent.py
+from child import testchild
+
+testchild()
+
+child.py
+def test_child():
+       print('child')
+
+
+-------------------------------------------------------------------------------------------------------------
+
+# EOFError is raised when one of the built-in functions input() or raw_input() hits an end-of-file condition (EOF) without reading any data. 
+
+with open('foo.txt', 'r') as file:
+    while True:
+        # try:
+            line = next(file)
+            print(line, end='')
+        # except StopIteration:
+        #     break  # StopIteration is raised when we reach EOF
+
+# Division by zero
+
+num1 = 10
+num2 = 0
+result = num1 / num2
+
+#index error -  index out of range 
+a = [1, 2, 3]
+print(a[3])  
+
+# name error
+# A NameError in Python occurs when a program attempts to use a variable, 
+# function, or module that is not defined or is not accessible in the current scope.
+
+geeky = input()
+print(geek)
+
+#indentation error
+a=4
+if ( a >=  5) :
+print('Greater than equal to 5')
+else:
+print("Lesser than 5")
+
+#TypeError
+
+greet = "Good"
+num = 4
+print(greet + num)
+
+#overflow error
+
+# error message you might encounter when doing math
+import math
+
+# Example computation involving large numbers
+result = math.exp(1000)
+print(result)
